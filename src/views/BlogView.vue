@@ -1,10 +1,11 @@
 <script setup>
-
+    import EntradasBlog from '../components/EntradasBlog.vue';
 </script>
 
 <template>
     <div>
-        <h1 class="title">Hola estas en el Blog</h1>
+        <h1 class="title">Hola estás en el Blog</h1>
+        <EntradasBlog />
     </div>
 </template>
 

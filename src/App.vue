@@ -1,17 +1,23 @@
 <script setup>
+  import { ref } from 'vue'
+  // pages
   import HomeView from './views/HomeView.vue'
   import AboutView from './views/AboutView.vue'
   import BlogView from './views/BlogView.vue'
+
+  // states
+  const pageActive = ref(HomeView)  
+
 </script>
 
 <template>
   <div>
     <div class="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Blog</a>
+      <a href="#" @click="pageActive = HomeView">Home</a>
+      <a href="#" @click="pageActive = AboutView">About</a>
+      <a href="#" @click="pageActive = BlogView">Blog</a>
     </div>
-    <HomeView />
+    <component :is="pageActive" />
   </div>
 </template>
 
