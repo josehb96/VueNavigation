@@ -1,5 +1,8 @@
 <script setup>
+  
+  import { RouterView } from 'vue-router'
   import { ref } from 'vue'
+  
   // pages
   import HomeView from './views/HomeView.vue'
   import AboutView from './views/AboutView.vue'
@@ -17,11 +20,19 @@
       <a href="#" @click="pageActive = AboutView">About</a>
       <a href="#" @click="pageActive = BlogView">Blog</a>
     </div>
-    <component :is="pageActive" />
+    <!-- <component :is="pageActive" /> -->
+    <div class="body">
+      <RouterView />
+    </div>
   </div>
 </template>
 
 <style scoped>
+
+.body {
+  padding: 3rem;
+  background-color: aqua;
+}
 
 .menu {
   display: flex;
