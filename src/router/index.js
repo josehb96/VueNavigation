@@ -7,15 +7,18 @@ import BlogView from '../views/BlogView.vue'
 const routes = [
    {
        path: '/',
-       component: HomeView
+       component: HomeView,
+       name: 'home'
    },
    {
        path: '/about',
-       component: AboutView 
+       component: AboutView,
+       name: 'about' 
    },
    {
        path: '/blog',
-       component: BlogView
+       component: BlogView,
+       name: 'blog'
    } 
 
 ]

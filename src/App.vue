@@ -12,16 +12,23 @@
   <div>
     <div class="menu">
       <RouterLink to="/" >Home</RouterLink>
-      <RouterLink to="/about" >About</RouterLink>
-      <RouterLink to="/blog" >Blog</RouterLink>
-      <a href="/home">volver a home</a>
+      <RouterLink :to="{ name: 'about' }" >About</RouterLink>
+      <RouterLink :to="{ name: 'blog' }" >Blog</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
     </div>
     <!-- <component :is="pageActive" /> -->
-    <RouterView />
+     <div class="content">
+        <RouterView />
+     </div>
   </div>
 </template>
 
 <style scoped>
+
+.content {
+  width: 600px;
+  padding: 1em;
+}
 
 .body {
   padding: 3rem;
