@@ -22,7 +22,7 @@ const routes = [
        name: 'blog'
    },
    {
-       path: '/entra/id',
+       path: '/entra/:id',
        component: EntradaBlogView,
        name: 'blog-entrada'
    } 

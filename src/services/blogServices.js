@@ -25,3 +25,7 @@ export const listaBlogs = [
     content: "El DOM (Document Object Model) es la representación estructurada de un documento HTML. JavaScript permite modificar el DOM para actualizar el contenido de una página de manera dinámica."
   },
 ]
+
+export const getBlogId = (id) => {
+  return listaBlogs.find(blog => blog.id == id)
+}
