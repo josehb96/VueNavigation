@@ -1,29 +1,23 @@
 <script setup>
   
-  import { RouterView } from 'vue-router'
+  import { RouterView, RouterLink } from 'vue-router'
   import { ref } from 'vue'
   
   // pages
   import HomeView from './views/HomeView.vue'
-  import AboutView from './views/AboutView.vue'
-  import BlogView from './views/BlogView.vue'
-
-  // states
-  const pageActive = ref(HomeView)  
 
 </script>
 
 <template>
   <div>
     <div class="menu">
-      <a href="#" @click="pageActive = HomeView">Home</a>
-      <a href="#" @click="pageActive = AboutView">About</a>
-      <a href="#" @click="pageActive = BlogView">Blog</a>
+      <RouterLink to="/" >Home</RouterLink>
+      <RouterLink to="/about" >About</RouterLink>
+      <RouterLink to="/blog" >Blog</RouterLink>
+      <a href="/home">volver a home</a>
     </div>
     <!-- <component :is="pageActive" /> -->
-    <div class="body">
-      <RouterView />
-    </div>
+    <RouterView />
   </div>
 </template>
 
