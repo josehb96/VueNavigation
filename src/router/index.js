@@ -17,16 +17,22 @@ const routes = [
        name: 'about' 
    },
    {
-       path: '/blog',
-       component: BlogView,
-       name: 'blog'
-   },
-   {
        path: '/entra/:id(//d+)', // Forzamos a que sólo aceptemos valores numéricos para dicho parámetro
        component: EntradaBlogView,
        name: 'blog-entrada'
-   } 
-
+   }, 
+   {
+       path: '/blog',
+       component: BlogView,
+       name: 'blog',
+       children: [
+           {
+               path: 'detail/:id',
+               component: EntradaBlogView,
+               name: 'blog-detail'
+           }
+       ]
+   }
 ]
 
 const router = createRouter({

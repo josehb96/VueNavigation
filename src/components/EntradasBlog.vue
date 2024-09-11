@@ -7,7 +7,7 @@
     <div>
         <h3>Lista Blogs</h3>
         <div v-for="blog in listaBlogs" class="blog-item">
-            <RouterLink :to="{ name: 'blog-entrada', params: { id: blog.id } }" class="item-link">{{ blog.title }}</RouterLink>
+            <RouterLink :to="{ name: 'blog-detail', params: { id: blog.id } }" class="item-link">{{ blog.title }}</RouterLink>
         </div>
     </div>
 </template>
