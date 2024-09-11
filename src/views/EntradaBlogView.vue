@@ -1,10 +1,16 @@
 <script setup>
-    import { ref } from 'vue'
+    import { useRoute } from 'vue-router';
+    import { ref, onMounted } from 'vue'
     import { getBlogId } from '../services/blogServices';
 
     // state
+    const route = useRoute()
     const blogRetrieve = ref(getBlogId(1)) // Recupera por defecto el blog con id = 1
 
+    // methods
+    onMounted(() => { // mientras se este cargando el componente
+        blogRetrieve.value = getBlogId(route.params.id)
+    })
 
 </script>
 
