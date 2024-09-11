@@ -22,7 +22,7 @@ const routes = [
        name: 'blog'
    },
    {
-       path: '/entra/:id',
+       path: '/entra/:id(//d+)', // Forzamos a que sólo aceptemos valores numéricos para dicho parámetro
        component: EntradaBlogView,
        name: 'blog-entrada'
    } 
