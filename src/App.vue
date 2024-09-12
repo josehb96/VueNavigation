@@ -1,7 +1,7 @@
 <script setup>
   
-  import { RouterView, RouterLink } from 'vue-router'
-  import { ref } from 'vue'
+  import { RouterView } from 'vue-router'
+  import HeaderMain from './components/HeaderMain.vue';
   
   // pages
   import HomeView from './views/HomeView.vue'
@@ -10,12 +10,7 @@
 
 <template>
   <div>
-    <div class="menu">
-      <RouterLink to="/" >Home</RouterLink>
-      <RouterLink :to="{ name: 'about' }" >About</RouterLink>
-      <RouterLink :to="{ name: 'blog' }" >Blog</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </div>
+    <HeaderMain />
     <!-- <component :is="pageActive" /> -->
      <div class="content">
         <RouterView />

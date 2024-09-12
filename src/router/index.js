@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import BlogView from '../views/BlogView.vue'
 import EntradaBlogView from '../views/EntradaBlogView.vue'
+import SearchBlog from '../views/SearchBlogView.vue'
 
 const routes = [
    {
@@ -21,6 +22,11 @@ const routes = [
        component: EntradaBlogView,
        name: 'blog-entrada'
    }, 
+   {
+       path: '/search-blog',
+       component: SearchBlog,
+       name: 'search-blog'
+   },
    {
        path: '/blog',
        component: BlogView,
