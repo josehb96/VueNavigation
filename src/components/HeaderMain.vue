@@ -15,8 +15,9 @@
     <div>
         <div class="menu">
             <RouterLink to="/" >Home</RouterLink>
-            <RouterLink :to="{ name: 'about' }" >About</RouterLink>
-            <RouterLink :to="{ name: 'blog' }" >Blog</RouterLink>
+            <RouterLink :to="{ name: 'about' }">About</RouterLink>
+            <RouterLink :to="{ name: 'blog' }">Blog</RouterLink>
+            <RouterLink :to="{ name: 'login' }">Acceder</RouterLink>
             <div>
                 <input type="text" placeholder="Buscar..." v-model="kword">
                 <button @click="buscarBlog">Buscar</button>
