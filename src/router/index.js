@@ -13,4 +13,11 @@ const router = createRouter({
     routes
 })
 
+// El callback ejecutar siempre antes de que la ruta cambie
+router.beforeEach((to, from) => { // to representa la ruta al que queremos ir y from la ruta desde la que estamos
+
+    console.log(to.fullPath)    
+
+})
+
 export default router
