@@ -16,7 +16,11 @@ const router = createRouter({
 // El callback ejecutar siempre antes de que la ruta cambie
 router.beforeEach((to, from) => { // to representa la ruta al que queremos ir y from la ruta desde la que estamos
 
-    console.log(to.fullPath)    
+    let auth = localStorage.getItem('isAuth') === 'true' 
+
+    if (to.meta.secure && auth) {
+        console.log('ruta protegida, y usuario logueado')
+    }
 
 })
 

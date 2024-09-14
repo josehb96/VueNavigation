@@ -10,6 +10,9 @@ export const usersRoutes = [
     {
         path: '/user-perfil',
         component: PerfilUserView, 
-        name: 'user-perfil'
+        name: 'user-perfil',
+        meta: {
+            secure: true  
+        }
     }
 ]
