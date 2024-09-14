@@ -18,8 +18,10 @@ router.beforeEach((to, from) => { // to representa la ruta al que queremos ir y 
 
     let auth = localStorage.getItem('isAuth') === 'true' 
 
-    if (to.meta.secure && auth) {
-        console.log('ruta protegida, y usuario logueado')
+    if (to.meta.secure && !auth) {
+        return {
+            path: '/login' // Si no se cumple la condición de seguridad, lo redirigimos al login
+        }
     }
 
 })
