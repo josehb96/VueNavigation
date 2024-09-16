@@ -31,12 +31,17 @@ src/
 │   ├── index.js
 │   ├── home.js
 │   └── users.js
+├── services/
+│   └── blogServices.js
 ├── views/
 │   ├── HomeView.vue
 │   ├── AboutView.vue
 │   ├── BlogView.vue
+│   ├── EntradaBlogView.vue
+│   ├── SearchBlogView.vue
 │   └── NotFoundView.vue
 ├── components/
+|   ├── EntradasBlog.vue
 │   └── HeaderMain.vue
 └── users/
     ├── LoginView.vue
@@ -61,14 +66,6 @@ src/
 - **Meta Fields**: Used for adding extra information to routes, useful for navigation guards
 - **Navigation Guards**: Implemented using `router.beforeEach` for protecting routes
 - **Dynamic Route Matching**: Using params with dynamic segments in the route path
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome. Feel free to check issues page if you want to contribute.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
 
